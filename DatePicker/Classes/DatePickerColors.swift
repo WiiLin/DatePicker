@@ -15,11 +15,11 @@ class DatePickerColors {
     public static var inactiveTextLight: UIColor = UIColor(hex: "#CDCED2")
     public static var backdropLight: UIColor = UIColor.white.withAlphaComponent(0.5)
     
-    public static var backgroundDark: UIColor = UIColor(hex: "#2e2e2e")
-    public static var mainDark: UIColor = UIColor.white.withAlphaComponent(0.9)
-    public static var inactiveTextDark: UIColor = UIColor(hex: "#616161")
-    public static var backdropDark: UIColor = UIColor.black.withAlphaComponent(0.5)
-    
+    public static var backgroundDark: UIColor = .black
+    public static var mainDark: UIColor = UIColor(hex: "#00FFD1")
+    public static var inactiveTextDark: UIColor =  UIColor(hex: "#B962FD").withAlphaComponent(0.5)
+    public static var backdropDark: UIColor = UIColor.white.withAlphaComponent(0.4)
+
     public static var backdrop: UIColor = {
         if #available(iOS 13, *) {
             return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in

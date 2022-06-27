@@ -17,15 +17,19 @@ class YearCollectionViewCell: UICollectionViewCell {
 
     // MARK: Outlet Actions
     @IBAction func butonClicked(_ sender: UIButton) {
-        guard let p = parent, let gp = p.parent, let y = label.text, let year = Int(y) else {return}
-        gp.changeYear(to: year)
+        guard let p = parent, let gp = p.parent, let y = label.text else {return}
+        var newY = y.replacingOccurrences(of: "民國", with: "")
+        newY = newY.replacingOccurrences(of: "年", with: "")
+        newY = newY.replacingOccurrences(of: " ", with: "")
+        guard let year = Int(newY) else {return}
+        gp.changeYear(to: year + 1911)
     }
 
     // MARK: Setup
     func setup(year: Int, parent: YearsCollectionViewCell) {
         self.parent = parent
         if year != 0 {
-            self.label.text = "\(year)"
+            self.label.text = "民國 \(year - 1911) 年"
         } else {
             self.label.text = ""
         }

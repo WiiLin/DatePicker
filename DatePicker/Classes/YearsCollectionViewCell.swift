@@ -138,7 +138,7 @@ extension YearsCollectionViewCell: UICollectionViewDelegate, UICollectionViewDat
 
     // MARK: CollectionView Cell Setup
     func cellWidth() -> CGFloat {
-        return 90
+        return 120
     }
 
     func cellSize() -> CGSize {

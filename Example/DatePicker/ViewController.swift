@@ -42,8 +42,10 @@ class ViewController: UIViewController {
     @IBAction func present(_ sender: UIButton) {
         self.label.alpha = 0
         let picker = DatePicker()
-        
-        picker.setup(beginWith: Date()) { (selected, date) in
+        let min = "1922/01/01"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        picker.setup(beginWith: Date(),min: dateFormatter.date(from: min)!,max: Date()) { (selected, date) in
             if selected, let selectedDate = date {
                 print(selectedDate.string())
             } else {

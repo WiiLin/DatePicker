@@ -16,7 +16,26 @@ class DayHeaderCollectionViewCell: UICollectionViewCell {
     }
 
     func setup(day: String) {
-        self.dayLabel.text = day
+
+        switch day {
+        case "Sun":
+            self.dayLabel.text = "日"
+        case "Mon":
+            self.dayLabel.text = "一"
+        case "Tue":
+            self.dayLabel.text = "二"
+        case "Wed":
+            self.dayLabel.text = "三"
+        case "Thu":
+            self.dayLabel.text = "四"
+        case "Fri":
+            self.dayLabel.text = "五"
+        case "Sat":
+            self.dayLabel.text = "六"
+        default:
+            self.dayLabel.text = day
+        }
+
         style()
     }
 

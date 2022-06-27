@@ -24,6 +24,7 @@ public class DatePickerHelper {
         }
         var returnValue: [String] = [String]()
         let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "zh_Hant_TW")
         if let months = formatter.monthSymbols {
             returnValue = months
         }
@@ -37,6 +38,7 @@ public class DatePickerHelper {
         }
         var returnValue: [String] = [String]()
         let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_TW")
         if let months = formatter.shortWeekdaySymbols {
             returnValue = months
         }
